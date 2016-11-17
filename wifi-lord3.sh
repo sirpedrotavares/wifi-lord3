@@ -56,7 +56,7 @@ PERMANENT_WORK_DIR="$WORK_DIR/workdir"
 PASSWORDS_DIR="$PERMANENT_WORK_DIR/wifi-lord3-passwords"
 revision=1
 version=1.1
-online_source="https://raw.githubusercontent.com/retinadark/wifi-lord3/master/wifi-lord3.sh"
+online_source="https://raw.githubusercontent.com/sirpedrotavares/wifi-lord3/master/wifi-lord3.sh"
 	
 #Window size
 TOPLEFT="-geometry 90x13+0+0"
