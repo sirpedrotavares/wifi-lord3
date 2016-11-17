@@ -1,0 +1,521 @@
+/* NOS // DESKTOP */
+/* 16.09.15 */
+
+/* =============================================================================
+   Reset
+   ========================================================================== */
+   
+* { margin: 0; padding: 0; }
+html, body, object, iframe, h1, h2, h3, h4, select,h5, h6, p, blockquote, pre, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, input, table, caption, tbody, tfoot, thead, tr, th, td, textarea {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	}
+ul {list-style-type: none;}
+
+/* =============================================================================
+   HTML5 element display
+   ========================================================================== */
+
+article, aside, details, figcaption, figure, footer, header, hgroup, nav, section { display: block;}
+audio[controls], canvas, video { display: inline-block; *display: inline; *zoom: 1;}
+
+video{width: 100%; height: 100%;}
+
+a {color: inherit;}
+/* =============================================================================
+  Utility
+   ========================================================================== */
+
+html { font-size: 100%; overflow-y: scroll; -webkit-overflow-scrolling: touch; -webkit-tap-highlight-color: rgba(0,0,0,0); -webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; }
+::-moz-selection { background: #ffb22e; color: #fff; text-shadow: none; }
+::selection { background: #ffb22e; color: #fff; text-shadow: none; }
+b, strong { font-weight: bold; }
+small { font-size: 85%; display:block;}
+img { border: 0; -ms-interpolation-mode: bicubic; }
+button, .button {cursor: pointer;border: none;	}
+textarea { overflow: auto; vertical-align: top; }
+table { border-collapse: collapse; border-spacing: 0; }
+.alignLeft {text-align:left;}
+.alignRight {text-align:right;}
+.alignCenter {text-align:center;}
+.displayNone {display:none;}
+.block {display:block;}
+.clr {clear:both; width:100%;}
+.left {float:left;}
+.right {float:right;}
+
+/* ------------- Common styles */
+
+iframe, .passesList, .passSelected, .main form, .downloadBox, .downloadBox a, .infoBox, a.fb-button, a.fb-button-loading, a.moreOptions
+{-webkit-border-radius:3px; -moz-border-radius:3px; border-radius:3px;}
+
+* {box-sizing: border-box; -ms-box-sizing: border-box; -moz-box-sizing: border-box;-webkit-box-sizing: border-box;}
+
+
+/* =============================================================================
+   Layout
+   ========================================================================== */
+
+body {
+	background:#f3f1ef;
+	font-family:"squaresanspro-regular", Arial, Tahoma, Geneva, sans-serif;
+	text-align:center;
+	font-size:100%;
+	color:#333;
+	margin:0; padding:0;
+	position:relative;
+}
+html, body {height:100%;}
+.container {min-height:100%; position:relative;}
+.wrap {width:925px; padding-bottom:30px; height: auto !important; margin: 0 auto;}
+header {padding:5px 0 3px 0; height:75px; overflow:hidden; background:#f3f1ef url(bg-header.png) repeat-x bottom;}
+article {margin:25px 0;}
+.main {display: block; margin:80px 0; padding: 5px 0; min-height: 520px; text-align: left; position: relative; height: auto;}
+footer {background:url(../images/bg-footer.png); position:absolute; bottom:0; padding:10px 0px; color:#666; font-size:.8em; overflow:auto; margin:0; margin-top:50px; min-height:15px; width:100%; border-top:2px dotted #999;}
+footer a {color:#666; text-decoration:none; border-bottom:0px; margin:0 5px;}
+
+/* ================================================= Sprite */
+
+.logoFonHome, .logoFon, .fb, .tw, .gg, .yt {background-image:url(sprite.png); background-repeat:no-repeat;}
+
+.gg {background-position:-496px -3px;}
+.tw {background-position:-609px -3px;}
+.fb {background-position:-533px -3px;}
+.yt {background-position:-572px -3px;}
+
+/* ================================================= Header */
+.logoFon {width:230px;height:60px; background-position:-123px -10px; border-bottom:0; float:left;}
+
+header .right {margin-top:16px;}
+
+nav ul {display:block; float:left; margin:0; padding:0;}
+
+nav ul li {display:block; float:left; margin:0 10px;}
+nav ul li a { font-size:1em; display:block; width: auto; color:#474a4c; border-bottom:0px; padding:5px 0; margin-right:10px;}
+nav ul li a:hover {border-bottom:0px;color:#aaa;}
+
+
+.select {position: relative; display: inline-block;}
+
+.lang {position: relative; display: inline-block; font-size:.75em;}
+.lang select {float:left; color:#c1c1c1; outline:none; -webkit-appearance:none; background:#fff; width: 130px; padding:0; height: 30px;  cursor:pointer; border:1px solid #ddd; padding:4px 10px;}
+
+.lang:after {
+	content: url(bg-select-lang.png);
+	position: absolute;
+    top:1px;
+    right: 1px;
+    bottom: 0;
+	width:18px;
+	height:19px;
+	cursor:pointer;
+    padding:7px 5px 2px 5px;
+    background:#e9e9e9;
+    color: #999;
+    pointer-events:none;
+}
+
+.ie .lang {margin-top:2px; font-size:.8em;}  
+.ie .lang:after {content:none;}  
+
+.no-pointer-events .lang:after {content: none;} 
+
+
+/* =============================================================================
+   Headings
+   ========================================================================== */
+
+h1 {font-family: 'squaresanspro-regular'; font-size:1.5em; color:#252525; font-weight:bold; margin-bottom:15px;}
+h1 small {font-weight: 400;}
+h2 {font-size:2.2em; text-align:left; color:#666; font-weight:400;}
+h1 strong {font-size:2em; text-align:center; margin-top:80px; display:block; font-weight:400;}
+h2.message {text-align:center; margin-top:40px; font-size:2.2em; display: none;}
+h3 {font-size:1.6em;}
+
+h4 {font-family: 'squaresanspro-thin'; font-size:2.5em; color:#252525; margin-bottom:15px;}
+
+/* =============================================================================
+   Main
+   ========================================================================== */
+   
+ol.choiceList {margin:40px;}
+ol.choiceList li {padding:10px;}
+ol.choiceList li a:first-child {margin-right:30px;}
+ol.choiceList li a:last-child {font-style:italic; font-size:.9em; display:none;}
+   
+p {font-size:1.5em; color:#666; line-height:35px; margin:10px 0;}
+a {color:#333; text-decoration:none; border-bottom: 1px dotted #333;}
+a:hover {color:#333; text-decoration:none; border-bottom: 1px dotted #333;}
+
+
+/* ================================================= home page */
+
+body.home {
+	background:#f3f1ef url(bg-home.jpg) no-repeat center 50px; 
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+}
+
+.col1 {width:300px;}
+.col2 {width:550px; padding:30px 0 0 0;}
+
+.login {
+	background:#f4f3ef;
+	border: 1px solid #bec2c5;
+	margin-top:15px; 
+	padding:5px 0;
+	-webkit-box-shadow: 2px 0px 15px 0px rgba(207,203,207,1);
+	-moz-box-shadow: 2px 0px 15px 0px rgba(207,203,207,1);
+	box-shadow: 2px 0px 15px 0px rgba(207,203,207,1);
+	-webkit-border-radius:5px; -moz-border-radius:5px; border-radius:5px;
+}
+.login h2 {font-size:2em; text-align:left; font-weight:400; color: #ffaf3d;}
+.login fieldset.checkbox input[type="checkbox"] {margin:1px 5px 0px 0;}
+.login a {color:#fab500; text-align: left; border-bottom: 1px dotted #fab500;}
+
+
+.loginNos, .loginFon {cursor: pointer; color: #fff; padding: 20px; text-align: center; font-weight: bold; margin: 10px auto; font-size: 1.2em;}
+.loginNos {background:#191919; font-family:"azo_sansregular", Arial, Tahoma, Geneva, sans-serif;}
+.loginFon, .login input[type="submit"] {
+	background: #fcc101; /* Old browsers */
+	background: -moz-linear-gradient(left,  #fcc101 0%, #f28b02 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, right top, color-stop(0%,#fcc101), color-stop(100%,#f28b02)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(left,  #fcc101 0%,#f28b02 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(left,  #fcc101 0%,#f28b02 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(left,  #fcc101 0%,#f28b02 100%); /* IE10+ */
+	background: linear-gradient(to right,  #fcc101 0%,#f28b02 100%); /* W3C */
+}
+
+.loginFon2 {cursor: pointer; color: #fff; padding: 20px; text-align: center; font-weight: bold; margin: 10px auto; font-size: 1.2em;}
+.loginFon2 {
+	background: #fcc101; /* Old browsers */
+	background: -moz-linear-gradient(left,  #fcc101 0%, #f28b02 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, right top, color-stop(0%,#fcc101), color-stop(100%,#f28b02)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(left,  #fcc101 0%,#f28b02 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(left,  #fcc101 0%,#f28b02 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(left,  #fcc101 0%,#f28b02 100%); /* IE10+ */
+	background: linear-gradient(to right,  #fcc101 0%,#f28b02 100%); /* W3C */
+}
+
+.NosForm {font-family:"azo_sansregular", Arial, Tahoma, Geneva, sans-serif; background:#fff; border: 1px solid #b6b6b6; margin-top: 10px; text-align: center; padding-bottom: 10px;}
+.NosForm h2 {font-size: 1.7em; padding:10px; color: #474a4c;}
+.NosForm input[type="submit"] {
+	background:#336699;
+	border:0px;
+	color:#fff;
+	display:block;
+	text-align:center;
+	font-weight:bold;
+	cursor:pointer;
+	text-decoration:none;
+}
+
+/* ================================================= Access Pass List */
+
+.buyNow {width:100%; color:#fff; font-weight:400; background:url(bg-blackbox.png);}
+.pass2 {position:relative; display:inline-block; width:24%; text-align:center; min-height:200px; margin-top:15px; margin-bottom:15px;}
+.pass2:nth-child(1), .pass2:nth-child(2), .pass2:nth-child(3) {border-right:2px dotted #cbcbcb;}
+.buyNow .product {margin:15px; } 
+.buyNow span.method { display:none;}
+.buyNow span.timing {display:block; text-align:center; float:left; width:100%;}
+.buyNow span.timing {font-size:1.8em; font-weight:bold;}
+.buyNow span.timing small {display:block; font-size:15px; font-weight:400; margin-top:30px; margin-bottom:60px;}
+.buyNow span.price {font-size:1.8em; padding: 10px 0; color: #f9bd1e; display: block; width: 100%; font-weight:bold;}
+.buyNow a {color:#f9bd1e; display:block; padding-top: 5px; clear: both; font-size:1.3em; border-bottom:0px; text-transform:uppercase; font-weight:bold; border-top:1px dotted #fff; text-align: center; }
+.buyNow a:hover {color:#fff;}
+
+/* ================================================= BuyButton */
+.buyButtonBox {width:100%; height:0px; font-weight:400; font-size:1.8em;}
+.buyButton a {background:#ff9900 no-repeat center right; width:100%; border: 0px; padding:15px; text-align:center; color:#fff; display: block; float: left; font-weight:bold;}
+.buyButtonBox .buyButton a:first-child {margin-right: 10px;}
+.buyButton a {
+    background: #fcc101; /* Old browsers */
+    background: -moz-linear-gradient(left,  #fcc101 0%, #f28b02 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, right top, color-stop(0%,#fcc101), color-stop(100%,#f28b02)); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(left,  #fcc101 0%,#f28b02 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(left,  #fcc101 0%,#f28b02 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(left,  #fcc101 0%,#f28b02 100%); /* IE10+ */
+    background: linear-gradient(to right,  #fcc101 0%,#f28b02 100%); /* W3C */
+}
+
+    
+/* ================================================= Promo */
+.promoBox {width:100%; height:52px; font-weight:400; font-size:1.1em;}
+.promo a {background:#fff no-repeat center right; width:100%; border: 0px; padding:15px; text-align:center; color:#333; display: block; float: left;}
+.promoBox .promo a:first-child {margin-right: 10px;}
+/* ================================================= Success page */
+
+body.succesful header .right {width: 310px; margin-top: 0px; }
+body.succesful header h2 {color:#b2aba4; letter-spacing: 2px; margin:0; font-size: 1.8em;}
+body.succesful header form {margin-top: 20px;}
+
+.browsingTime {float: left; color: #b2aba4;}
+.browsingTime small {display: block; text-align: left; font-size: .8em;}
+
+.hourminute {font-size:.7em; font-weight:bold; margin:0 auto; overflow:auto;}
+.hourminute span {margin:0 2px;}
+
+.social {font-size:1em; color:#333; line-height:30px; padding-top:7px;}
+.social a {display:inline-block; width:35px;height:35px; margin:0 3px; border-bottom:0;}
+
+.success {width: 790px; margin:0 auto; position: relative; height: 600px;}
+.ad470, .ad300a, .ad300b, .ad728 {position: absolute; background: #fff;}
+
+.success h2 {font-weight: bold;}
+
+.ad470 {top:60px; left:0;}
+.ad300a {right:0; top: 60px;}
+.ad300b {right:0; top:180px;}
+.ad728 {bottom:0px;}
+
+/* =============================================================================
+   Form Elements
+   ========================================================================== */
+   
+/* ============================================ Errors */
+body.home .error { margin:5px 0; padding:10px;font-size:.8em; font-style:italic;}
+.error {
+	position:relative;
+	padding:10px;
+	font-size:.8em;
+	margin:20px auto 0 auto;
+	color:#333;
+	width:100%;
+	line-height:18px;
+	font-style:italic;
+	background:#f7a0ad;
+}
+
+/* ============================================ Forms */
+
+.main form {width:300px; padding:10px 25px;margin:0 auto; color:#666666; font-size:.85em; text-align: left;}
+
+.support {display:none; width:290px; margin:20px auto 10px auto; font-size:.8em; padding:0px; color:#666;}
+
+label {display:block; margin:6px 0px;}
+fieldset {margin-top:10px;}
+fieldset small {margin-top:5px; font-size:.8em; }
+fieldset.checkbox div {display:block; height:35px; font-size:.9em;line-height:15px;}
+fieldset.checkbox small {float:right; width:270px; margin-top:0;}
+fieldset.checkbox input[type="checkbox"] {margin:1px 5px 35px 0; display:block; float:left; padding:0;}
+fieldset:last-child {margin-top:20px;}
+
+input:focus, select:focus { -webkit-box-shadow: 0 0 3px 1px #95d5f9; -moz-box-shadow: 0 0 3px 1px #95d5f9; box-shadow: 0 0 3px 1px #95d5f9;}
+
+
+input[type="text"],
+input[type="password"],
+input[type="email"],
+input[type="tel"],
+select
+ {
+	background:#fff;
+	border:1px solid #c6c6c6;
+	box-shadow:0, 0, 0, 0.0980392) 1px 1px 3px 1px inset;
+	-webkit-border-radius:1px; -moz-border-radius:1px; border-radius:1px;
+	color:#333;
+	width:100%;
+	font-size:1.1em;
+	display:block;
+	padding:13px; 
+	margin:0;
+	letter-spacing:-1px;
+	font-weight:400;
+}
+
+select {height:48px;}
+
+.login input[type="submit"]
+{
+	border:0px;
+	color:#fff;
+	width:100%;
+	display:block;
+	text-align:center;
+	font-weight:bold;
+	padding:12px 25px; 
+	cursor:pointer;
+	text-decoration:none;
+	-webkit-border-radius:5px; -moz-border-radius:5px; border-radius:5px;
+}
+
+
+input[type="submit"],
+.actionButton a
+{
+	border:0px;
+	color:#333;
+	width:100%;
+	display:block;
+	text-align:center;
+	font-weight:bold;
+	padding:15px 25px; 
+	cursor:pointer;
+	font-size:1.3em;
+	text-decoration:none;
+}
+
+.actionButton {margin:10px auto;}
+
+
+/* =============================================================================
+   Reveal modal
+   ========================================================================== */
+   
+.reveal-modal-bg { 
+		position: fixed; 
+		height: 100%;
+		width: 100%;
+		background: #000;
+		background: rgba(0,0,0,.6);
+		z-index: 100;
+		display: none;
+		top: 0;
+		left: 0; 
+		}
+
+.reveal-modal, #modal_container {
+		visibility: hidden;
+		font-size:.8em;
+		text-align:center;
+		top: 30px; 
+		left: 33%;
+		margin-left: -280px;
+		width: 920px;
+		background: #eae7de;
+		position: absolute;
+		z-index: 101;
+		padding: 10px 25px;
+		-moz-border-radius: 10px;
+		-webkit-border-radius: 10px;
+		border-radius: 10px;
+		border:2px solid #e1dfd7;
+		}
+		
+.reveal-modal h1, .reveal-modal h2 {text-align:left; margin:0;}
+.reveal-modal h2 {font-size: 1.5em; font-weight: bold; margin:5px 0;}
+.reveal-modal p {line-height:20px; text-align:left; font-size:1.1em; margin: 0;}
+	
+.reveal-modal .close-reveal-modal {
+		font-size: 22px;
+		line-height: .5;
+		position: absolute;
+		top: 8px;
+		right: 11px;
+		color: #aaa;
+		text-shadow: 0 -1px 1px rbga(0,0,0,.6);
+		font-weight: bold;
+		cursor: pointer;
+		} 
+
+/* =============================================================================
+   Tooltips
+   ========================================================================== */
+	
+	
+.bubbleInfo {position: relative;font-size:.9em; text-align:center;}
+.trigger {cursor:pointer}
+.help {display:inline-block; width:13px; height:13px; padding:0 5px; background:url(helpIco.png) no-repeat center center;}   
+.popup {position: absolute; width:95%; display: none; z-index: 50;	border-collapse: collapse; padding:5px; color:#fff; background:#333; -webkit-border-radius:5px; -moz-border-radius:5px; border-radius:5px; font-size:.8em; text-align:left; line-height:15px;}
+.popup a {color:#00a1de;}
+.popup:after {
+	content:"";
+	position:absolute;
+	bottom:-10px;
+	left:190px;
+	border-width:10px 10px 0; 
+	border-style:solid;
+	border-color:#333 transparent;
+    display:block; 
+    width:0;
+}
+
+
+/* =============================================================================
+   Fonts
+   ========================================================================== */
+  
+@font-face {
+    font-family: 'squaresanspro-regular';
+    src: url('../fonts/pfsquaresanspro-regular-webfont.eot');
+    src: url('../fonts/pfsquaresanspro-regular-webfontd41d.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/pfsquaresanspro-regular-webfont.woff') format('woff'),
+         url('../fonts/pfsquaresanspro-regular-webfont.ttf') format('truetype'),
+         url('../fonts/pfsquaresanspro-regular-webfont.svg#pf_square_sans_proregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'squaresanspro-thin';
+    src: url('../fonts/pfsquaresanspro-thin-webfont.eot');
+    src: url('../fonts/pfsquaresanspro-thin-webfontd41d.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/pfsquaresanspro-thin-webfont.woff') format('woff'),
+         url('../fonts/pfsquaresanspro-thin-webfont.ttf') format('truetype'),
+         url('../fonts/pfsquaresanspro-thin-webfont.svg#pf_square_sans_prothin') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'azo_sansregular';
+    src: url('../fonts/azosans-regular-webfont.eot');
+    src: url('../fonts/azosans-regular-webfontd41d.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/azosans-regular-webfont.html') format('woff2'),
+         url('../fonts/azosans-regular-webfont.woff') format('woff'),
+         url('../fonts/azosans-regular-webfont.ttf') format('truetype'),
+         url('../fonts/azosans-regular-webfont.svg#azo_sansregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+	  
+
+/* =============================================================================
+   Overrides for Google Search Box
+   ========================================================================== */
+
+.gsc-search-button {
+    box-sizing: content-box !important;
+    -ms-box-sizing: content-box !important;
+    -moz-box-sizing: content-box !important;
+    -webkit-box-sizing: content-box !important;
+}
+
+input.gsc-input:focus {
+	-webkit-box-shadow: none !important;
+    -moz-box-shadow: none !important;
+    box-shadow: none !important;
+}
+
+
+/*.gsc-control-cse {
+   background-color: transparent !important;
+  border: none !important;
+}*/
+
+
+/* =============================================================================
+   Styles for Google Ads
+   ========================================================================== */
+
+.adsSquareWrap {
+	display: -webkit-box; 
+	display: -ms-flexbox;  
+	display: -webkit-flex; 
+	display: flex;         
+	justify-content: space-between;
+    width: 728px;
+    margin: 40px auto;
+}
+
+.adsRectangleWrap {
+	display: -webkit-box; 
+	display: -ms-flexbox;  
+	display: -webkit-flex; 
+	display: flex;   
+	justify-content: space-around;
+}
