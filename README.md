@@ -4,7 +4,7 @@ This script allows setup and capture traffic through rogue access points.
 To execute it:
   *  **./wifi-lord3.sh**
 
-For more info visits our [wiki](https://github.com/retinadark/wifi-lord3/wiki).
+For more info visits our [wiki](https://github.com/sirpedrotavares/wifi-lord3/wiki).
 
 ## :book: How it works
 
@@ -51,7 +51,7 @@ This script has 3 modes:
 
 ## :scroll: Changelog
 This script is updated with new features, improvements and fix of identified bugs with some frequency.
-Check out the [Changelog] (https://github.com/retinadark/wifi-lord3).
+Check out the [Changelog] (https://github.com/sirpedrotavares/wifi-lord3).
 
 ## :octocat: How to contribute
 All contributions are welcome. Please use GitHub to its fullest-- submit pull requests.
