@@ -2,7 +2,7 @@
 #~~~~~~~~~~~~~~~~~~~~~~~~~~wifi-lord3~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~#
 #####################################################################
 # autor: sirpedrotavares                                            #
-# email: sirpedrotavares@gmail.com                                  #
+# email: ptavares@seguranca-informatica.pt                          #
 # git: https://github.com/sirpedrotavares/wifi-lord3                #
 # license: GNU GENERAL PUBLIC LICENSE, Version 3, 29 June 2007      #
 # Copyright (C) 2016 ~ sirpedrotavares <sirpedrotavares@gmail.com>  #
